@@ -74,7 +74,7 @@ const Card = () => {
       </div>
 
       {/* Cooking and Want to Cook Section */}
-      <div className="lg:w-[40%] border-2">
+      <div className="lg:w-[40%] lg:mt-0 mt-10 border-2">
         {/* Want to Cook Section */}
         <div className="p-6">
           <h2 className="text-xl font-bold mb-4 text-center">

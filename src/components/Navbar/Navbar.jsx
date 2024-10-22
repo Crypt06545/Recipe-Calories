@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white sticky top-0 z-50 flex items-center justify-between p-4 border-b-2 w-11/12 mx-auto">
+    <nav className="sticky top-0 z-50 flex items-center justify-between p-4 border-b-2 lg:w-11/12 mx-auto bg-[#1D232A]">
       {/* Logo */}
       <div className="text-3xl font-bold">
         Recipe Calories
@@ -20,7 +20,7 @@ const Navbar = () => {
           onClick={toggleMenu}
           className="text-gray-800 focus:outline-none"
         >
-          <i className="fa-solid fa-bars fa-lg"></i>
+          <i className="fa-solid fa-bars fa-lg text-white"></i>
         </button>
       </div>
 
@@ -28,7 +28,7 @@ const Navbar = () => {
       <ul
         className={`${
           isOpen ? 'block' : 'hidden'
-        } absolute top-16 left-0 w-full bg-white md:flex md:static md:w-auto md:space-x-8 md:bg-transparent md:block text-gray-600`}
+        } absolute top-16 left-0 w-full bg-[#1D232A] md:flex md:static md:w-auto md:space-x-8 md:bg-transparent md:block text-gray-600`}
       >
         <li className="text-gray-400 font-medium hover:text-green-300 p-2 md:p-0">
           <a href="#" className="block md:inline-block">Home</a>
