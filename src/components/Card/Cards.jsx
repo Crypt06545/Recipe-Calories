@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Card = () => {
+const Card = ({ addRecipeQueue }) => {
   const [cards, setCards] = useState([]);
   // fetch card data
   useEffect(() => {
@@ -13,37 +13,42 @@ const Card = () => {
     <div className="w-11/12 mx-auto lg:flex gap-4 mt-14 mb-40">
       {/* Cards Section */}
       <div className="lg:w-[60%] grid lg:grid-cols-2 gap-4">
-        {cards.map(({recipe_id, recipe_image, recipe_name, short_description, preparing_time, calories, ingredients}) => {
+        {cards.map((recipe) => {
           return (
-            <div key={recipe_id} className="border-2 border-gray-400 p-4 rounded-2xl">
+            <div
+              key={recipe.recipe_id}
+              className="border-2 border-gray-400 p-4 rounded-2xl"
+            >
               <figure>
                 <img
                   className="rounded-2xl h-52 w-full object-cover"
-                  src={recipe_image}
+                  src={recipe.recipe_image}
                   alt=""
                 />
               </figure>
               <div className="">
-                <h2 className="card-title">{recipe_name}</h2>
-                <p>{short_description}</p>
+                <h2 className="card-title">{recipe.recipe_name}</h2>
+                <p>{recipe.short_description}</p>
                 <div className="border-b-2 border-gray-400 my-4"></div>
                 <p className="font-bold">Ingredients:</p>
                 <ul className="list-disc pl-5">
-                  {ingredients.map((ingredient,index) =>{
-                    return(<li key={index}> {ingredient}</li>)
+                  {recipe.ingredients.map((ingredient, index) => {
+                    return <li key={index}> {ingredient}</li>;
                   })}
                 </ul>
                 <div className="flex justify-between mt-4">
                   <p className="mt-2">
-                    <i className="fa-regular fa-clock m-2"></i>{preparing_time} minutes
+                    <i className="fa-regular fa-clock m-2"></i>
+                    {recipe.preparing_time} minutes
                   </p>
                   <p className="mt-2">
-                    <i className="fa-solid fa-fire-flame-curved m-2"></i>{}
-                    {calories}
+                    <i className="fa-solid fa-fire-flame-curved m-2"></i>
+                    {}
+                    {recipe.calories}
                   </p>
                 </div>
                 <div className="card-actions mt-5">
-                  <button className="btn bg-[#0BE58A] text-black rounded-full ">
+                  <button onClick={()=>addRecipeQueue(recipe)} className="btn bg-[#0BE58A] text-black rounded-full ">
                     Want to Cook
                   </button>
                 </div>
