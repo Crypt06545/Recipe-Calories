@@ -1,76 +1,56 @@
+import { useState, useEffect } from "react";
+
 const Card = () => {
+  const [cards, setCards] = useState([]);
+  // fetch card data
+  useEffect(() => {
+    fetch("./data.json")
+      .then((res) => res.json())
+      .then((data) => setCards(data));
+  }, []);
+
   return (
     <div className="w-11/12 mx-auto lg:flex gap-4 mt-14 mb-40">
       {/* Cards Section */}
       <div className="lg:w-[60%] grid lg:grid-cols-2 gap-4">
-        <div className="border-2 border-gray-400 p-4 rounded-2xl">
-          <figure>
-            <img
-              className="rounded-2xl"
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Spaghetti Bolognese"
-            />
-          </figure>
-          <div className="">
-            <h2 className="card-title">Spaghetti Bolognese</h2>
-            <p>Classic Italian pasta dish with savory meat sauce.</p>
-            <div className="border-b-2 border-gray-400 my-4"></div>
-            <p className="font-bold">Ingredients:</p>
-            <ul className="list-disc pl-5">
-              <li>500g ground beef</li>
-              <li>1 onion, chopped</li>
-              <li>2 cloves garlic, minced</li>
-            </ul>
-            <div className="flex justify-between mt-4">
-              <p className="mt-2">
-                <i className="fa-regular fa-clock m-2"></i>30 minutes
-              </p>
-              <p className="mt-2">
-                <i className="fa-solid fa-fire-flame-curved m-2"></i>600
-                calories
-              </p>
+        {cards.map(({recipe_id, recipe_image, recipe_name, short_description, preparing_time, calories, ingredients}) => {
+          return (
+            <div key={recipe_id} className="border-2 border-gray-400 p-4 rounded-2xl">
+              <figure>
+                <img
+                  className="rounded-2xl h-52 w-full object-cover"
+                  src={recipe_image}
+                  alt=""
+                />
+              </figure>
+              <div className="">
+                <h2 className="card-title">{recipe_name}</h2>
+                <p>{short_description}</p>
+                <div className="border-b-2 border-gray-400 my-4"></div>
+                <p className="font-bold">Ingredients:</p>
+                <ul className="list-disc pl-5">
+                  {ingredients.map((ingredient,index) =>{
+                    return(<li key={index}> {ingredient}</li>)
+                  })}
+                </ul>
+                <div className="flex justify-between mt-4">
+                  <p className="mt-2">
+                    <i className="fa-regular fa-clock m-2"></i>{preparing_time} minutes
+                  </p>
+                  <p className="mt-2">
+                    <i className="fa-solid fa-fire-flame-curved m-2"></i>{}
+                    {calories}
+                  </p>
+                </div>
+                <div className="card-actions mt-5">
+                  <button className="btn bg-[#0BE58A] text-black rounded-full ">
+                    Want to Cook
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="card-actions mt-5">
-              <button className="btn bg-[#0BE58A] text-black rounded-full ">
-                Want to Cook
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="border-2 border-gray-400 p-4 rounded-2xl">
-          <figure>
-            <img
-              className="rounded-2xl"
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Spaghetti Bolognese"
-            />
-          </figure>
-          <div className="">
-            <h2 className="card-title">Spaghetti Bolognese</h2>
-            <p>Classic Italian pasta dish with savory meat sauce.</p>
-            <div className="border-b-2 border-gray-400 my-4"></div>
-            <p className="font-bold">Ingredients:</p>
-            <ul className="list-disc pl-5">
-              <li>500g ground beef</li>
-              <li>1 onion, chopped</li>
-              <li>2 cloves garlic, minced</li>
-            </ul>
-            <div className="flex justify-between mt-4">
-              <p className="mt-2">
-                <i className="fa-regular fa-clock m-2"></i>30 minutes
-              </p>
-              <p className="mt-2">
-                <i className="fa-solid fa-fire-flame-curved m-2"></i>600
-                calories
-              </p>
-            </div>
-            <div className="card-actions mt-5">
-              <button className="btn bg-[#0BE58A] text-black rounded-full ">
-                Want to Cook
-              </button>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
 
       {/* Cooking and Want to Cook Section */}

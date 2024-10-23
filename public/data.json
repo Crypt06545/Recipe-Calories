@@ -1,0 +1,98 @@
+[
+  {
+    "recipe_image": "https://img.freepik.com/premium-photo/caesar-salad-with-grilled-chicken-parmesan-cheese-wooden-background_960396-707392.jpg?size=626&ext=jpg",
+    "recipe_id": 1,
+    "recipe_name": "Grilled Chicken Salad",
+    "short_description": "A healthy and delicious salad with grilled chicken, fresh greens, and a tangy dressing.",
+    "ingredients": [
+      "550 g chicken",
+      "120 ml soy sauce",
+      "200 g basil leaf",
+      "400 g mushroom",
+      "1 avocado",
+      "100 g cherry tomatoes"
+    ],
+    "preparing_time": "30 min",
+    "calories": "320 calories"
+  },
+  {
+    "recipe_image": "https://www.spendwithpennies.com/wp-content/uploads/2023/04/1200-Spaghetti-Carbonara-2-SpendWithPennies.jpg",
+    "recipe_id": 2,
+    "recipe_name": "Spaghetti Carbonara",
+    "short_description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+    "ingredients": [
+      "400 g spaghetti",
+      "150 g pancetta",
+      "2 eggs",
+      "100 g parmesan cheese",
+      "Salt",
+      "Pepper"
+    ],
+    "preparing_time": "20 min",
+    "calories": "600 calories"
+  },
+  {
+    "recipe_image": "https://img.freepik.com/premium-photo/stir-fry-with-chicken-mushrooms-broccoli-peppers-chinese-food_144356-71956.jpg?size=626&ext=jpg",
+    "recipe_id": 3,
+    "recipe_name": "Vegetable Stir Fry",
+    "short_description": "A quick and easy stir fry with a variety of fresh vegetables.",
+    "ingredients": [
+      "200 g bell pepper",
+      "150 g broccoli",
+      "100 g snap peas",
+      "50 ml soy sauce",
+      "1 tbsp olive oil",
+      "1 tsp ginger"
+    ],
+    "preparing_time": "15 min",
+    "calories": "250 calories"
+  },
+  {
+    "recipe_image": "https://images.themodernproper.com/billowy-turkey/production/posts/2021/Crispy-Beef-Tacos-5.jpg?w=1200&q=82&auto=format&fit=crop&dm=1621830745&s=5e3c4c0baa6b20774a6f1e6455f1abab",
+    "recipe_id": 4,
+    "recipe_name": "Beef Tacos",
+    "short_description": "Tasty beef tacos topped with fresh salsa and cheese.",
+    "ingredients": [
+      "500 g ground beef",
+      "8 taco shells",
+      "100 g cheddar cheese",
+      "1 onion",
+      "Tomato salsa",
+      "Lettuce"
+    ],
+    "preparing_time": "25 min",
+    "calories": "450 calories"
+  },
+  {
+    "recipe_image": "https://cdn.loveandlemons.com/wp-content/uploads/2019/08/caprese-salad-recipe.jpg",
+    "recipe_id": 5,
+    "recipe_name": "Caprese Salad",
+    "short_description": "A refreshing salad with fresh mozzarella, tomatoes, and basil.",
+    "ingredients": [
+      "200 g mozzarella cheese",
+      "200 g tomatoes",
+      "100 g basil leaves",
+      "50 ml olive oil",
+      "Salt",
+      "Pepper"
+    ],
+    "preparing_time": "10 min",
+    "calories": "300 calories"
+  },
+  {
+    "recipe_image": "https://butternutbakeryblog.com/wp-content/uploads/2023/04/moist-chocolate-cake-683x1024.jpg",
+    "recipe_id": 6,
+    "recipe_name": "Chocolate Cake",
+    "short_description": "A rich and moist chocolate cake with a creamy frosting.",
+    "ingredients": [
+      "200 g all-purpose flour",
+      "200 g sugar",
+      "100 g cocoa powder",
+      "2 eggs",
+      "150 ml milk",
+      "200 g butter"
+    ],
+    "preparing_time": "45 min",
+    "calories": "500 calories"
+  }
+]
