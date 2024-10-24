@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-const Card = ({ addRecipeQueue }) => {
+const Card = ({ addrecipeQueue, recipeQueue }) => {
+  console.log("recipeQueue:", recipeQueue);
   const [cards, setCards] = useState([]);
   // fetch card data
   useEffect(() => {
@@ -44,11 +45,14 @@ const Card = ({ addRecipeQueue }) => {
                   <p className="mt-2">
                     <i className="fa-solid fa-fire-flame-curved m-2"></i>
                     {}
-                    {recipe.calories}
+                    {recipe.calories} calories
                   </p>
                 </div>
                 <div className="card-actions mt-5">
-                  <button onClick={()=>addRecipeQueue(recipe)} className="btn bg-[#0BE58A] text-black rounded-full ">
+                  <button
+                    onClick={() => addrecipeQueue(recipe)}
+                    className="btn bg-[#0BE58A]  hover:text-white text-black rounded-full "
+                  >
                     Want to Cook
                   </button>
                 </div>
@@ -61,32 +65,42 @@ const Card = ({ addRecipeQueue }) => {
       {/* Cooking and Want to Cook Section */}
       <div className="lg:w-[40%] lg:mt-0 mt-10 border-2">
         {/* Want to Cook Section */}
-        <div className="p-6">
+        <div className="">
           <h2 className="text-xl font-bold mb-4 text-center">
-            Want to cook: 01
+            Want to cook: {recipeQueue.length}
           </h2>
-          <table className="table-auto w-full">
+
+          <table className="table">
+            {/* Table Head */}
             <thead>
-              <tr className="text-left font-semibold">
-                <th className="w-1/12">#</th>
-                <th className="w-5/12">Name</th>
-                <th className="w-3/12">Time</th>
-                <th className="w-3/12">Calories</th>
-                <th className="w-2/12">Status</th>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Calories</th>
+                <th>
+                  <button className="btn bg-[#0BE58A] hover:text-white text-black rounded-full">
+                    Preparing
+                  </button>
+                </th>
               </tr>
             </thead>
+
+            {/* Table Body */}
             <tbody>
-              <tr>
-                <td className="py-2">1</td>
-                <td className="py-2">Chicken Caesar Salad</td>
-                <td className="py-2">20 minutes</td>
-                <td className="py-2">400 calories</td>
-                <td className="py-2">
-                  <span className="bg-emerald-500 text-white py-1 px-3 rounded-full text-sm">
-                    Preparing
-                  </span>
-                </td>
-              </tr>
+              {recipeQueue.map((recipe, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{recipe.recipe_name}</td>
+                  <td>{recipe.preparing_time}</td>
+                  <td>{recipe.calories}</td>
+                  <td>
+                    <button className="btn bg-[#0BE58A] hover:text-white text-black rounded-full">
+                      Preparing
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

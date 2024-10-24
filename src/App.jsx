@@ -6,24 +6,24 @@ import Card from "./components/Card/Cards";
 
 function App() {
   const [recipeQueue, setRecipeQueue] = useState([]);
-  const addRecipeQueue = (recipe) => {
-    const isExit = recipeQueue.find(
+  const addrecipeQueue = (recipe) => {
+    const isExist = recipeQueue.find(
       (previousRecipe) => previousRecipe.recipe_id === recipe.recipe_id
     );
-    if (!isExit) {
+    if (!isExist) {
       setRecipeQueue([...recipeQueue, recipe]);
     } else {
-      alert("This is already Exists");
+      alert("already have");
     }
   };
-  console.log(recipeQueue);
+  // console.log(recipeQueue);
 
   return (
     <>
       <Navbar />
       <Hero />
       <Recipe />
-      <Card addRecipeQueue={addRecipeQueue} />
+      <Card addrecipeQueue={addrecipeQueue} recipeQueue={recipeQueue}/>
     </>
   );
 }

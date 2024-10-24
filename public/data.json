@@ -12,8 +12,8 @@
       "1 avocado",
       "100 g cherry tomatoes"
     ],
-    "preparing_time": "30 min",
-    "calories": "320 calories"
+    "preparing_time": "30",
+    "calories": "320"
   },
   {
     "recipe_image": "https://www.spendwithpennies.com/wp-content/uploads/2023/04/1200-Spaghetti-Carbonara-2-SpendWithPennies.jpg",
@@ -28,8 +28,8 @@
       "Salt",
       "Pepper"
     ],
-    "preparing_time": "20 min",
-    "calories": "600 calories"
+    "preparing_time": "20",
+    "calories": "600"
   },
   {
     "recipe_image": "https://img.freepik.com/premium-photo/stir-fry-with-chicken-mushrooms-broccoli-peppers-chinese-food_144356-71956.jpg?size=626&ext=jpg",
@@ -44,8 +44,8 @@
       "1 tbsp olive oil",
       "1 tsp ginger"
     ],
-    "preparing_time": "15 min",
-    "calories": "250 calories"
+    "preparing_time": "15",
+    "calories": "250 "
   },
   {
     "recipe_image": "https://images.themodernproper.com/billowy-turkey/production/posts/2021/Crispy-Beef-Tacos-5.jpg?w=1200&q=82&auto=format&fit=crop&dm=1621830745&s=5e3c4c0baa6b20774a6f1e6455f1abab",
@@ -60,8 +60,8 @@
       "Tomato salsa",
       "Lettuce"
     ],
-    "preparing_time": "25 min",
-    "calories": "450 calories"
+    "preparing_time": "25 ",
+    "calories": "450 "
   },
   {
     "recipe_image": "https://cdn.loveandlemons.com/wp-content/uploads/2019/08/caprese-salad-recipe.jpg",
@@ -76,8 +76,8 @@
       "Salt",
       "Pepper"
     ],
-    "preparing_time": "10 min",
-    "calories": "300 calories"
+    "preparing_time": "10 ",
+    "calories": "300 "
   },
   {
     "recipe_image": "https://butternutbakeryblog.com/wp-content/uploads/2023/04/moist-chocolate-cake-683x1024.jpg",
@@ -92,7 +92,7 @@
       "150 ml milk",
       "200 g butter"
     ],
-    "preparing_time": "45 min",
-    "calories": "500 calories"
+    "preparing_time": "45 ",
+    "calories": "500 "
   }
 ]
